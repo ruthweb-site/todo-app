@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="todolist.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+  <div class="heading">
+    <h2>📘 Study Planner</h2>
+  </div>
+  
+
+
+  <div class="wrapper">
+    <div class="task-input">
+        <input type="text" id="task-name" placeholder="Add a new Task">
+        <input type="date" id="due-date">
+        <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+        </select>
+    </div>
+
+    <div class="controls">
+      <div class="filters">
+        <span id="all" class="active">All</span>
+        <span id="pending">Pending</span>
+        <span id="completed">Completed</span>
+      </div>
+      <button class="clear-btn">Clear All</button>
+    </div>
+
+    <ul class="task-box"></ul>
+  </div>
+
+  <script src="todolist1.js"></script>
+</body>
+</html>

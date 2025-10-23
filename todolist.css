@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(to right, #d9afd9, #97d9e1);
+}
+.heading {
+  margin-top: 170px;     /* Keep it reasonably spaced */
+  margin-bottom: 20px;  /* Space below the heading */
+  text-align: center;
+  color: #6c4e8e;
+}
+
+.wrapper {
+  max-width: 450px;
+  margin: 0 auto;         /* Remove top margin */
+  background-color: aliceblue;
+  border-radius: 7px;
+  padding: 28px 0;
+}
+
+
+/* Task input container */
+.task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0 25px;
+}
+
+/* Input box styling */
+.task-input input[type="text"] {
+  height: 52px;
+  flex: 1 1 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 0 20px;
+}
+
+.task-input input[type="date"],
+.task-input select {
+  height: 52px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+/* Placeholder color */
+.task-input input::placeholder {
+  color: #bfbfbf;
+}
+
+/* Filters and controls */
+.controls,
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 17px;
+}
+
+.filters span:first-child {
+  margin-left: 0;
+}
+
+.filters span.active {
+  color: #a66fb2;
+}
+
+.controls .clear-btn {
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 4px;
+  padding: 7px 13px;
+  background: #b487c1;
+  transition: background 0.3s ease;
+}
+
+.controls .clear-btn:hover {
+  background: #a66fb2;
+}
+
+/* Task list container */
+.task-box {
+  margin: 20px 25px;
+}
+
+.task-box .task {
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Task item content */
+.task label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Optional: style for due date and priority */
+.task-details {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Optional: priority color indicators */
+.task-details.high {
+  color: red;
+}
+
+.task-details.medium {
+  color: orange;
+}
+
+.task-details.low {
+  color: green;
+}
+
+.task label p.checked {
+  text-decoration: line-through;
+}
+
+.task label input {
+  margin-top: 6px;
+  margin-right: 12px;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+
+.settings .task-menu {
+  position: absolute;
+  padding: 5px 0;
+  right: -5px;
+  bottom: -65px;
+  z-index: 2;
+  transform: scale(0);
+  border-radius: 4px;
+  background: #fff;
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 25px;
+  font-size: 16px;
+  padding: 17px 15px;
+  margin-bottom: 2px;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: #f5f5f5;
+}
+
+.task-menu li i {
+  padding-right: 8px;
+}
